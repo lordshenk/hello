@@ -72,9 +72,10 @@ canvas {
 	margin: 10px;
 	display: none;
 	text-align: center;
+	justify-content: center;
 }
 .menu.show p {
-	display: inherit;
+	display: flex;
 }
 .menu p:hover {
 	margin-bottom: 10px;
@@ -172,7 +173,7 @@ canvas {
 		max-width: 35px;
 	}
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 500px) {
 	.main {
 		top: 35%;
 	}

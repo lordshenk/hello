@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
 
 canvas {
   display: block;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
 }
 #particles-js {
   position: fixed;
@@ -113,12 +113,12 @@ canvas {
 .content .show * {
 	display: initial;
 }
-.content .projects a {
+.content .skills p {
 	color: #000;
 	padding: 0 5px;
 	margin: 0 10px;
 }
-.content .projects a:focus {
+.content .skills p:focus {
 	color: #000;
 }
 .content .contact a {

@@ -4,6 +4,11 @@ body {
 	padding: 0;
 	font-family: 'Spartan', sans-serif;
 	user-select: none;
+	opacity: 0;
+	transition: opacity .7s ease;
+}
+body.dark {
+	background: #111;
 }
 body::-webkit-scrollbar {
 	display: none;
@@ -26,8 +31,23 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  transition: background-color .6s ease;
+}
+.dark #particles-js {
+	background-color: #111;
 }
 /* ---- */
+
+h3,
+p,
+u {
+	transition: color .7s ease;
+}
+.dark h3,
+.dark p,
+.dark u {
+	color: #efefef;
+}
 
 .wrapper {
 	height: 100vh;
@@ -80,10 +100,18 @@ canvas {
 .menu p:hover {
 	margin-bottom: 10px;
 	border-bottom: 3px solid #000a;
+	transition: border-bottom .4s ease;
+}
+.dark .menu p:hover {
+	border-bottom: 3px solid #fffa;
 }
 .menu .show {
 	margin-bottom: 10px;
 	border-bottom: 3px solid #000a;
+	transition: border-bottom .4s ease;
+}
+.dark .menu .show {
+	border-bottom: 3px solid #fffa;
 }
 .content {
 	display: flex;
@@ -118,8 +146,14 @@ canvas {
 	padding: 0 5px;
 	margin: 0 10px;
 }
+.dark .content .skills p {
+	color: #efefef;
+}
 .content .skills p:focus {
 	color: #000;
+}
+.dark .content .skills p:focus {
+	color: #efefef;
 }
 .content .contact a {
 	text-decoration: none;
@@ -131,6 +165,9 @@ canvas {
 	border-radius: 50%;
 	transition: all 0.4s ease;
 	filter: invert(19%) sepia(9%) saturate(8%) hue-rotate(314deg) brightness(91%) contrast(93%);
+}
+.dark .content .contact img {
+	filter: invert(83%) sepia(87%) saturate(1731%) hue-rotate(182deg) brightness(119%) contrast(86%);
 }
 .content .contact img:hover {
 	background: #0002;

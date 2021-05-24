@@ -1,4 +1,5 @@
 const body = document.getElementsByTagName("body")[0];
+const wrapper = document.getElementsByClassName("wrapper")[0];
 const main = document.getElementsByClassName("main")[0];
 const title = document.getElementsByTagName("h3")[0];
 const menu = document.getElementsByClassName("menu")[0];
@@ -142,7 +143,7 @@ body.addEventListener('mouseup', () => {
 // Show page onload
 window.onload = () => {
   setTimeout(() => {
-    body.style.opacity = 1;
+    wrapper.classList.remove('hidden-content');
   }, 1000);
 }
 

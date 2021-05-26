@@ -130,7 +130,8 @@ runParticles();
 
 // Switch mode
 let timeoutId;
-body.addEventListener('mousedown', () => {
+body.addEventListener('mousedown', (e) => {
+  e.preventDefault();
   timeoutId = setTimeout(() => {
     body.classList.toggle('dark');
     runParticles();

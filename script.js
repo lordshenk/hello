@@ -130,14 +130,20 @@ runParticles();
 
 // Switch mode
 let timeoutId;
-body.addEventListener('mousedown', (e) => {
+let initPress = (e) => {
   e.preventDefault();
   timeoutId = setTimeout(() => {
     body.classList.toggle('dark');
     runParticles();
   }, 1500);
-});
+};
+body.addEventListener('mousedown', initPress);
+body.addEventListener('touchstart', initPress);
+
 body.addEventListener('mouseup', () => {
+  clearTimeout(timeoutId);
+});
+body.addEventListener('touchend', () => {
   clearTimeout(timeoutId);
 });
 

@@ -133,6 +133,7 @@ let timeoutId;
 let initPress = (e) => {
   e.preventDefault();
   timeoutId = setTimeout(() => {
+    e.preventDefault();
     body.classList.toggle('dark');
     runParticles();
   }, 1500);

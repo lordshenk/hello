@@ -79,6 +79,7 @@ u {
 	position: relative;
 	margin: 0;
 	margin-bottom: 1rem;
+	cursor: pointer;
 }
 .menu {
 	position: relative;
@@ -98,6 +99,7 @@ u {
 	display: none;
 	text-align: center;
 	justify-content: center;
+	cursor: pointer;
 }
 .menu.show p {
 	display: flex;
